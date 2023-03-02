@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,13 +8,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Transform parent;
     private static GameManager instance;
 
-    [SerializeField] private int amountOfObjects;
+    private int amountOfObjects;
 
     private string input;
     
 
     private void Update() {
-        if(Input.GetKeyDown(KeyCode.Return)) {
+        if(Input.GetKeyDown(KeyCode.R)) {
             // clear current scene of all objects with tag "PhysicsObject"
             GameObject[] objects = GameObject.FindGameObjectsWithTag("PhysicsObjects");
             foreach(GameObject obj in objects) {
@@ -65,6 +62,7 @@ public class GameManager : MonoBehaviour
         
 
         Debug.Log("Initializing demo scene");
+        Debug.Log("amount of objects: " + amountOfObjects);
         // instanciate the physics objects
         for(int i = 0; i < amountOfObjects; i++) {
             Instantiate(physicsObject, 
@@ -88,8 +86,17 @@ public class GameManager : MonoBehaviour
         this.choice = a;
     }
 
+    public void setAmountOfObjects(int a) {
+        Debug.Log("Setting amount of objects to: " + a);
+        amountOfObjects = a;
+    }
+
     public int getChoice() {
         return choice;
+    }
+
+    public int getAmountOfObjects() {
+        return amountOfObjects;
     }
 
     public CollisionDetectionMode getCollisionMethod() {

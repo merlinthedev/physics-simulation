@@ -24,6 +24,7 @@ public class LogProfiler : MonoBehaviour
         stopwatch = new Stopwatch();
         writer = new StreamWriter(logFileName);
         UnityEngine.Debug.Log("Started logging");
+        UnityEngine.Debug.Log("Amount of objects: " + GameManager.getInstance().getAmountOfObjects());
         stopwatch.Start();
         shouldWrite = true;
     }
