@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
             LoadSampleScene();
         }
     }
-    
+
 
     // Q: Why does GetChoice() work but GetPhysicsObjectChoice() doesn't?
     // A: Because GetChoice() is called from a dropdown menu, but GetPhysicsObjectChoice() is called from a button.
@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Physics object choice 1");
                 break;
         }
-    } 
+    }
 
 
     // Load samplescene

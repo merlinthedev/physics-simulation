@@ -413,7 +413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   logFileName: discrete
-  benchmarkTime: 5
+  benchmarkTime: 10
 --- !u!1001 &5860561852521843919
 PrefabInstance:
   m_ObjectHideFlags: 0
